@@ -15,6 +15,8 @@
     "@angular/platform-browser-dynamic": "9.0.7",
     "@angular/router": "9.0.7",
     "angular-in-memory-web-api": "0.9.0",
+    "angularfire2": "^5.4.2",
+    "firebase": "^7.14.2",
     "jasmine-core": "3.5.0",
     "jasmine-marbles": "0.6.0",
     "rxjs": "6.5.5",

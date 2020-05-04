@@ -1,22 +1,22 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+
+import { AngularFireDatabase } from "angularfire2/database";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class CartService {
   items = [];
 
-  constructor(
-      private http: HttpClient
-  ) {}
+  constructor(private http: HttpClient, public db: AngularFireDatabase) {}
 
   addToCart(product) {
     this.items.push(product);
   }
 
   getItems() {
-    return this.items;
+    return this.db.list("/quizzes").valueChanges();
   }
 
   clearCart() {
@@ -25,6 +25,6 @@ export class CartService {
   }
 
   getShippingPrices() {
-    return this.http.get('/assets/shipping.json');
+    return this.http.get("/assets/shipping.json");
   }
 }

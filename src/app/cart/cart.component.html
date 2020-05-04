@@ -3,9 +3,10 @@
     <a routerLink="/shipping">Shipping Prices</a>
 </p>
 
+List of items : 
 <div class="cart-item" *ngFor="let item of items">
-    <span>{{ item.name }} </span>
-    <span>{{ item.price | currency }}</span>
+    <span>{{ item.technology }} </span>
+    <span>{{ item.complexity }}</span>
 </div>
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
