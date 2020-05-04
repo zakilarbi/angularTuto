@@ -1,0 +1,9 @@
+<h2>{{ client.name }} Details</h2>
+
+<div>
+    <h3>{{ client.age }}</h3>
+    <h3>{{ client.fonction }}</h3>
+    <a [title]="client.adresse + ' Map'" [routerLink]="['/map']">
+        <h3>{{ client.adresse }}</h3>
+    </a>
+</div>
